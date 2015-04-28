@@ -1,4 +1,4 @@
-"{{name}}": {
+"{{{partial 'logical_id'}}}": {
   "Type": "{{type}}"
   {{#if default}},"Default": "{{default}}"{{/if}}
   {{#if noEcho}},"NoEcho": "true"{{/if}}

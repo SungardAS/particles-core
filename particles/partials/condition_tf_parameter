@@ -1,4 +1,4 @@
-"{{name}}": {
+"{{{partial 'logical_id'}}}": {
   "Fn::Equals": [
     {
       "Ref": "{{parameterName}}"
