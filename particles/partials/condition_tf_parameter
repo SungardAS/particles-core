@@ -1,8 +1,0 @@
-"{{name}}": {
-  "Fn::Equals": [
-    {
-      "Ref": "{{parameterName}}"
-    },
-    "true"
-  ]
-}

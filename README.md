@@ -2,26 +2,25 @@
 
 A core set of often used particles for [condensation](https://github.com/SungardAS/condensation).
 
-## partials
+## conditions
 
-### condition\_tf\_parameter
+### is\_true
 
-A condition for a true/false parameter that will evaluate if the
-parameter is "true".
+Will evalute to true if the related parameter is `true`
 
 **Parameters**
 
-  * `name {String}` *required* Name of the parameter
-  * `parameterName {String}` *required* Name of the template parameter to
-reference
+  * `paremeterLogicalId {String}` **required** LogicalId of the parameter
 
-### parameter
+
+## parameters
+
+### base
 
 A generic implementation of a parameter
 
 **Parameters**
 
-  * `name {String}` **required** Name of the parameter
   * `type {String}` **required** maps to *Type*
   * `default {String}` maps to *Default*
   * `noEcho {Boolean}` maps to *NoEcho*
@@ -34,13 +33,12 @@ A generic implementation of a parameter
   * `description {String}` maps to *Description*
   * `constraintDescription {String}` maps to *ConstraintDescription*
 
-### parameter\_cidr\_range
+### cidr\_range
 
 Creates a parameter that accepts a valid CIDR as the value.
 
 **Parameters**
 
-  * `name {String}` **required** Name of the parameter
   * `default {String}` maps to *Default*
   * `noEcho {Boolean}` maps to *NoEcho*
   * `allowedValues {Array}` maps to *AllowedValues*
@@ -51,15 +49,30 @@ Creates a parameter that accepts a valid CIDR as the value.
 
   * `description` "Valid CIDR Range. Format: x.x.x.x/x"
 
-### parameter\_tf
+### true\_false
 
 Creates a parameter that accepts either "true" or "false" as the value.
 
 **Parameters**
 
-  * `name {String}` **required** Name of the parameter
   * `default {String}` maps to *Default*
   * `noEcho {Boolean}` maps to *NoEcho*
   * `description {String}` maps to *Description*
 
 
+## sets
+
+### true\_false
+
+When used in a layout, will generate a parameter and condition for true/false values
+
+**Parameters**
+
+  * `paremeterLogicalId` **required** LogicalId for the parameter
+  * `conditionLogicalId` **required** LogicalId for the condition
+
+Passed on to parameter
+
+  * `default {String}` maps to *Default*
+  * `noEcho {Boolean}` maps to *NoEcho*
+  * `description {String}` maps to *Description*
