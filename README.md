@@ -29,7 +29,7 @@ Will evalute to true if the related parameter is `false`
 
   * `paremeterLogicalId {String}` **required** LogicalId of the parameter
 
-### is\_false
+### is\_empty
 
 Will evalute to true if the related parameter is an empty string
 
