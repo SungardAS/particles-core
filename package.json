@@ -1,6 +1,6 @@
 {
   "name": "particles-common-core",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "A core set of often used particles for condensation",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
