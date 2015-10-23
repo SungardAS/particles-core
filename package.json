@@ -17,6 +17,11 @@
     "type": "git",
     "url": "https://github.com/sungardas/particles-common-core.git"
   },
-  "keywords": ["condensation-particles"],
-  "license": "Apache-2.0"
+  "keywords": [
+    "condensation-particles"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
 }
