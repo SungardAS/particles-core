@@ -1,7 +1,19 @@
+var _ = require('lodash');
+
 module.exports = function(str,options) {
-  if ((str != null) && (typeof str != 'object') && (str.indexOf('{') != 0)) {
-    return '"'+str+'"';
-  } else {
+  var isObject = false;
+
+  if (_.isObject(str)) {
     return str;
   }
+  else {
+    try {
+      JSON.parse(str)
+      return str;
+    }
+    catch(e) {
+      return '"'+str+'"';
+    }
+  }
+
 };

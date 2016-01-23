@@ -1,7 +1,7 @@
 "Type": "{{type}}"
-{{#if creationPolicy}},"CreationPolicy": {{creationPolicy}}{{/if}}
-{{#if deletionPolicy}},"DeletionPolicy": {{deletionPolicy}}{{/if}}
-{{#if updatePolicy}},"UpdatePolicy": {{updatePolicy}}{{/if}}
+{{#if creationPolicy}},"CreationPolicy": "{{creationPolicy}}"{{/if}}
+{{#if deletionPolicy}},"DeletionPolicy": "{{deletionPolicy}}"{{/if}}
+{{#if updatePolicy}},"UpdatePolicy": "{{updatePolicy}}"{{/if}}
 {{#if properties}},"Properties": {{properties}}{{/if}}
 {{#if condition}},"Condition": "{{this.condition}}"{{/if}}
 {{#if metadata}},"Metadata": {{helper "propertyValue" metadata}}{{/if}}
