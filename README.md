@@ -1,14 +1,14 @@
-# particles-common-core
+# particles-core
 
 A core set of often used particles for [condensation](https://github.com/SungardAS/condensation).
 
 [![logo](https://raw.githubusercontent.com/SungardAS/condensation/master/docs/images/condensation_logo.png)](https://github.com/SungardAS/condensation)
 
-[![NPM](https://nodei.co/npm/particles-common-core.png)](https://nodei.co/npm/particles-common-core/)
+[![NPM](https://nodei.co/npm/particles-core.png)](https://nodei.co/npm/particles-core/)
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SungardAS/condensation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Dependency
-Status](https://david-dm.org/SungardAS/particles-common-core.svg?branch=master)](https://david-dm.org/SungardAS/particles-common-core?branch=master)
+Status](https://david-dm.org/SungardAS/particles-core.svg?branch=master)](https://david-dm.org/SungardAS/particles-core?branch=master)
 
 
 ## conditions
