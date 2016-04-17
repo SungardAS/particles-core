@@ -1,0 +1,6 @@
+{
+  "BaseResource": {
+    "Type": "TestMe",
+    "DependsOn": "Resource1"
+  }
+}

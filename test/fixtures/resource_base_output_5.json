@@ -1,0 +1,17 @@
+{
+  "BaseResource": {
+    "Type": "TestMe",
+    "CreationPolicy": {
+      "AutoScalingRollingUpdate": {
+        "MaxBatchSize": 5,
+        "MinInstancesInService": 10,
+        "MinSuccessfulInstancesPercent": 65,
+        "PauseTime": "PT5M",
+        "WaitOnResourceSignals": true
+      },
+      "AutoScalingScheduledAction": {
+        "IgnoreUnmodifiedGroupSizeProperties": true
+      }
+    }
+  }
+}

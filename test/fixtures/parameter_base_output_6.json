@@ -1,0 +1,8 @@
+{
+  "BaseParameter": {
+     "Type": "String",
+     "Description": "password",
+     "MaxValue": "5",
+     "NoEcho": "true"
+  }
+}

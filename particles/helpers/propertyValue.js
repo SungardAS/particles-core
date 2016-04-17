@@ -4,7 +4,7 @@ module.exports = function(str,options) {
   var isObject = false;
 
   if (_.isObject(str)) {
-    return str;
+    return JSON.stringify(str);
   }
   else {
     try {

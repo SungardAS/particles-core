@@ -1,0 +1,6 @@
+{
+  "BaseResource": {
+    "Type": "TestMe",
+    "Condition": "MyCondition"
+  }
+}

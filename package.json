@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "description": "A core set of often used particles for condensation",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "author": {
     "name": "Kevin McGrath",
@@ -22,6 +22,12 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
+    "condensation": "^0.4.11",
     "lodash": "^4.11.0"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "lodash": "^4.11.1",
+    "mocha": "^2.4.5"
   }
 }

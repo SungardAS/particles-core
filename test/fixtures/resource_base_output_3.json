@@ -1,0 +1,11 @@
+{
+  "BaseResource": {
+     "Type": "TestMe",
+     "CreationPolicy": {
+       "ResourceSignal": {
+         "Count": 1,
+         "Timeout": "3600"
+     }
+   }
+  }
+}

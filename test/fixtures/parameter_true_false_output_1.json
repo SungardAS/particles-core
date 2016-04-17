@@ -1,0 +1,9 @@
+{
+  "TrueFalse": {
+     "Type": "String",
+     "AllowedValues": ["true", "false"],
+     "ConstraintDescription": "[true|false]",
+     "MaxLength": "5",
+     "MinLength": "4"
+  }
+}

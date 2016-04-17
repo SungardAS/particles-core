@@ -1,0 +1,8 @@
+{
+  "BaseResource": {
+    "Type": "TestMe",
+    "Metadata": {
+      "MetaKey1": "metaValue1"
+    }
+  }
+}

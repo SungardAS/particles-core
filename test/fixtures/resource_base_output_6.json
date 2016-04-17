@@ -1,0 +1,8 @@
+{
+  "BaseResource": {
+    "Type": "TestMe",
+    "Properties": {
+      "Prop1": "value1"
+    }
+  }
+}
