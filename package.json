@@ -23,7 +23,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "condensation": "^0.4.11",
-    "condensation-particle-tests": "0.4.0-rc1",
+    "condensation-particle-tests": "0.4.0-rc2",
     "lodash": "^4.11.0"
   },
   "devDependencies": {
