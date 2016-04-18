@@ -1,0 +1,11 @@
+{
+  "Condition1": {
+    "Fn::Not": [{
+      "Fn::Equals": [
+        { "Ref": "Parameter1" },
+        ""
+      ]
+    }]
+  }
+}
+

@@ -1,14 +1,13 @@
 # particles-core
 
-A core set of often used particles for [condensation](https://github.com/SungardAS/condensation).
+Often used particles for [condensation][condensation-url]
 
-[![logo](https://raw.githubusercontent.com/SungardAS/condensation/master/docs/images/condensation_logo.png)](https://github.com/SungardAS/condensation)
+[![condensation][condensation-image]][condensation-url]
 
-[![NPM](https://nodei.co/npm/particles-core.png)](https://nodei.co/npm/particles-core/)
-
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SungardAS/condensation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Dependency
-Status](https://david-dm.org/SungardAS/particles-core.svg?branch=master)](https://david-dm.org/SungardAS/particles-core?branch=master)
+[![NPM][npm-image]][npm-url]
+[![Gitter][gitter-image]][gitter-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
 
 
 ## conditions
@@ -153,3 +152,14 @@ A generic implementation of a resource
   * `condition {String}` maps to *Condition*
   * `metadata {String}` maps to *Metadata*
   * `dependsOn {Int}` maps to *DependsOn*
+
+[condensation-image]: https://raw.githubusercontent.com/SungardAS/condensation/master/docs/images/condensation_logo.png
+[condensation-url]: https://github.com/SungardAS/condensation
+[npm-image]: https://nodei.co/npm/particles-core.png
+[npm-url]: https://nodei.co/npm/particles-core/
+[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
+[gitter-url]: https://gitter.im/SungardAS/condensation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+[travis-image]: https://travis-ci.org/SungardAS/particles-core.svg?branch=master
+[travis-url]: https://travis-ci.org/SungardAS/particles-core
+[daviddm-image]: https://david-dm.org/SungardAS/particles-core.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/SungardAS/particles-core

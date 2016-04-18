@@ -1,5 +1,7 @@
 var assert = require("assert");
-var cTests = require("condensation-particle-tests");
+var CondensationTests = require("condensation-particle-tests");
+
+var cTests = new CondensationTests();
 
 describe("parameters", function() {
   describe("base", function() {

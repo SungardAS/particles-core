@@ -1,0 +1,8 @@
+{
+  "Condition1": {
+    "Fn::Equals": [
+      {"Ref": "Parameter1"},
+      "Match Me"
+    ]
+  }
+}
