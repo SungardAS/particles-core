@@ -6,7 +6,7 @@ var cTests = new CondensationTests();
 describe("parameters", function() {
   describe("true_false", function() {
     it("creates a true_false parameter", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "true_false",
         require("./fixtures/parameter_true_false_output_1"),

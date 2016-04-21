@@ -6,7 +6,7 @@ var cTests = new CondensationTests();
 describe("resources", function() {
   describe("base", function() {
     it("creates empty resource", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_1'),
@@ -15,7 +15,7 @@ describe("resources", function() {
     });
 
     it("creates type 'TestMe' resource", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_2'),
@@ -24,7 +24,7 @@ describe("resources", function() {
     });
 
     it("sets 'CreationPolicy' with object", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_3'),
@@ -44,7 +44,7 @@ describe("resources", function() {
     });
 
     it("sets 'CreationPolicy' with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_3'),
@@ -60,7 +60,7 @@ describe("resources", function() {
 
 
     it("sets 'DeletionPolicy' with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_4'),
@@ -75,7 +75,7 @@ describe("resources", function() {
     });
 
     it("sets 'UpdatePolicy' with object", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_5'),
@@ -101,7 +101,7 @@ describe("resources", function() {
     });
 
     it("sets 'UpdatePolicy' with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_5'),
@@ -115,7 +115,7 @@ describe("resources", function() {
     });
 
     it("sets 'Properties' with object", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_6'),
@@ -132,7 +132,7 @@ describe("resources", function() {
     });
 
     it("sets 'UpdatePolicy' with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_6'),
@@ -146,7 +146,7 @@ describe("resources", function() {
     });
 
     it("sets 'Condition' with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_7'),
@@ -160,7 +160,7 @@ describe("resources", function() {
     });
 
     it("sets 'Condition' with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_7'),
@@ -174,7 +174,7 @@ describe("resources", function() {
       );
 
       it("sets 'Metadata' with an object", function() {
-        var result = cTests.testParticle(
+        cTests.testParticle(
           "resource",
           "base",
           require('./fixtures/resource_base_output_8'),
@@ -191,7 +191,7 @@ describe("resources", function() {
       });
 
       it("sets 'Metadata' a string", function() {
-        var result = cTests.testParticle(
+        cTests.testParticle(
           "resource",
           "base",
           require('./fixtures/resource_base_output_8'),
@@ -207,7 +207,7 @@ describe("resources", function() {
     });
 
     it("sets 'Metadata' with an object", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_8'),
@@ -224,7 +224,7 @@ describe("resources", function() {
     });
 
     it("sets 'Metadata' a string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_8'),
@@ -239,7 +239,7 @@ describe("resources", function() {
     });
 
     it("sets 'DependsOn' with an object", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_9'),
@@ -254,7 +254,7 @@ describe("resources", function() {
     });
 
     it("sets 'DependsOn' with a string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_9'),
@@ -269,7 +269,7 @@ describe("resources", function() {
     });
 
     it("sets 'DependsOn' with a single value", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "resource",
         "base",
         require('./fixtures/resource_base_output_10'),

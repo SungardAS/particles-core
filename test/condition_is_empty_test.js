@@ -7,7 +7,7 @@ describe("conditions", function() {
   describe("is_empty", function() {
 
     it("creates the condition", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "condition",
         "is_empty",
         require('./fixtures/condition_is_empty_output_1'),

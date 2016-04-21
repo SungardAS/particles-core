@@ -7,7 +7,7 @@ describe("conditions", function() {
   describe("is_false", function() {
 
     it("creates the condition", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "condition",
         "is_false",
         require('./fixtures/condition_is_false_output_1'),

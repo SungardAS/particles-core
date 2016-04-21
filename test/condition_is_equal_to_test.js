@@ -7,7 +7,7 @@ describe("conditions", function() {
   describe("is_equal_to", function() {
 
     it("creates the condition", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "condition",
         "is_equal_to",
         require('./fixtures/condition_is_equal_to_output_1'),

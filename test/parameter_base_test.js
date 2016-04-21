@@ -6,7 +6,7 @@ var cTests = new CondensationTests();
 describe("parameters", function() {
   describe("base", function() {
     it("creates empty parameter", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_1'),
@@ -15,7 +15,7 @@ describe("parameters", function() {
     });
 
     it("creates type 'Integer' parameter", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_2'),
@@ -24,7 +24,7 @@ describe("parameters", function() {
     });
 
     it("sets 'NoEcho' to \"true\" with boolean", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_3'),
@@ -33,7 +33,7 @@ describe("parameters", function() {
     });
 
     it("sets 'NoEcho' to \"true\" with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_3'),
@@ -42,7 +42,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MaxLength' to string with number", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_4'),
@@ -51,7 +51,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MaxLength' to string with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_4'),
@@ -60,7 +60,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MinLength' to string with number", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_5'),
@@ -69,7 +69,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MinLength' to string with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_5'),
@@ -78,7 +78,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MaxValue' to string with number", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_6'),
@@ -87,7 +87,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MaxValue' to string with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_6'),
@@ -96,7 +96,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MinValue' to string with number", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_7'),
@@ -105,7 +105,7 @@ describe("parameters", function() {
     });
 
     it("sets 'MinValue' to string with string", function() {
-      var result = cTests.testParticle(
+      cTests.testParticle(
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_7'),

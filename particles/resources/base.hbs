@@ -3,6 +3,6 @@
 {{#if deletionPolicy}},"DeletionPolicy": {{helper "propertyValue" deletionPolicy}}{{/if}}
 {{#if updatePolicy}},"UpdatePolicy": {{helper "propertyValue" updatePolicy}}{{/if}}
 {{#if properties}},"Properties": {{helper "propertyValue" properties}}{{/if}}
-{{#if condition}},"Condition": {{helper "propertyValue" this.condition}}{{/if}}
-{{#if metadata}},"Metadata": {{helper "propertyValue" metadata}}{{/if}}
+{{#if this.condition}},"Condition": {{helper "propertyValue" this.condition}}{{/if}}
+{{#if this.metadata}},"Metadata": {{helper "propertyValue" this.metadata}}{{/if}}
 {{#if dependsOn}},"DependsOn": {{helper "propertyValue" dependsOn}}{{/if}}
