@@ -49,9 +49,11 @@ correct template compatible syntax for each.
   * `value {string|object}` **required** The property value to evaluate
     and/or change.
 
-## parameters
+## outputs
 
 ### base
+
+**Parameters**
 
   * `value {string|object}` **required** String, Ref or Fn to output.
   * `description {string|object}` String, Ref or Fn to use for the
