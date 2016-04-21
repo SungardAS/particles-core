@@ -22,7 +22,8 @@
     "condensation",
     "cloudformation",
     "cloud",
-    "formation"
+    "formation",
+    "aws"
   ],
   "license": "Apache-2.0",
   "dependencies": {
