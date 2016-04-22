@@ -3,7 +3,7 @@ var _ = require('lodash');
 module.exports = function(str,options) {
   var isObject = false;
 
-  if (_.isPlainObject(str)) {
+  if (_.isPlainObject(str) || _.isArray(str)) {
     return JSON.stringify(str);
   }
   else {
