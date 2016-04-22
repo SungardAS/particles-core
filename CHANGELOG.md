@@ -1,14 +1,15 @@
 # Change Log
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+All notable changes to this project will be documented here in
+accordance with [Keep a CHANGELOG][keep-changelog-url].
+This project adheres to [Semantic Versioning][semver-url].
 
-## [Unreleased]
+## [0.4.1] - 2016-04-22
 ### Added
-- helper for building a `Ref` to a logicalId. This will replace the
+- helper for building a `Ref` for a logicalId. This will eventually replace the
   ref partial
 
-### Filed
-- propertyValue helper will only stringify plain objects
+### Fixed
+- propertyValue helper will only stringify plain objects and arrays
 
 ## [0.4.0] - 2016-04-21
 ### Added
@@ -20,3 +21,5 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Updated dependencies to latest versions
 
 [cpt-url]: https://github.com/SungardAS/condensation-particle-tests
+[semver-url]: http://semver.org
+[keep-changelog-url]: http://keepachangelog.com
