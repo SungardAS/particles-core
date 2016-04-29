@@ -3,6 +3,12 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+
+## [Unreleased]
+### Changed
+- The `ref` helper was ultimately moved to the core of condensation as
+  this is where scoping of logical IDs takes place.
+
 ## [0.4.1] - 2016-04-22
 ### Added
 - helper for building a `Ref` for a logicalId. This will eventually replace the
