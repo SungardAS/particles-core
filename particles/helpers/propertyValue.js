@@ -8,7 +8,10 @@ module.exports = function(str,options) {
   }
   else {
     try {
-      JSON.parse(str)
+      var check = JSON.parse(str)
+      if (_.isBoolean(check)) {
+        throw("boolean");
+      }
       return str;
     }
     catch(e) {
