@@ -5,9 +5,14 @@ This project adheres to [Semantic Versioning][semver-url].
 
 
 ## [Unreleased]
+### Added
+- `propertyValue` now has a `forceNumber` option to ensuere the output
+  is a number and not a string when not a reference.
+
 ### Changed
 - The `ref` helper was ultimately moved to the core of condensation as
   this is where scoping of logical IDs takes place.
+- `propertyValue` will handle undefined values as empty strings
 
 ## [0.4.1] - 2016-04-22
 ### Added
