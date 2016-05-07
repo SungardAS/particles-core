@@ -1,6 +1,6 @@
 {
   "name": "particles-core",
-  "version": "0.4.2-rc1",
+  "version": "0.4.2-rc2",
   "publishConfig": {
     "tag": "rc"
   },
