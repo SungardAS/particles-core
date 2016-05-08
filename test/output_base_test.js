@@ -33,6 +33,15 @@ describe("outputs", function() {
       );
     });
 
+    it("creates output 'Output1' with value, description and condition", function() {
+      var result = cTests.testParticle(
+        "output",
+        "base",
+        require('./fixtures/output_base_output_4'),
+        {logicalId: "Output1", hArgs:{value: "A Value", description: "A description", condition: "SomeCondition"}}
+      );
+    });
+
   });
 });
 

@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning][semver-url].
   is a number and not a string when not a reference.
 - New particle `parameter/arn`
 - New particle `partial/fn_if`
+- `base` output now handle conditions
 
 ### Changed
 - The `ref` helper was ultimately moved to the core of condensation as
