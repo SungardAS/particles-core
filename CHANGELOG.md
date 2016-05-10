@@ -11,6 +11,9 @@ This project adheres to [Semantic Versioning][semver-url].
 - New particle `parameter/arn`
 - New particle `partial/fn_if`
 - `base` output now handle conditions
+- 'base` parameter now takes the `optional` parameter.  When set to true
+  `[optional]` will be added to the front of the description and
+  `allowedPattern` will be wrapped with `()?`
 
 ### Changed
 - The `ref` helper was ultimately moved to the core of condensation as
