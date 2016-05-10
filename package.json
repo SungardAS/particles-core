@@ -1,8 +1,8 @@
 {
   "name": "particles-core",
-  "version": "0.4.2-rc3",
+  "version": "0.4.2",
   "publishConfig": {
-    "tag": "rc"
+    "tag": "latest"
   },
   "description": "Often used particles for condensation",
   "scripts": {
