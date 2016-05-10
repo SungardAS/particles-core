@@ -1,0 +1,6 @@
+{
+  "BaseParameter": {
+     "Type": "String",
+     "Description": "[optional] A parameter"
+  }
+}

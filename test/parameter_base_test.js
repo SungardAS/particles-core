@@ -112,6 +112,32 @@ describe("parameters", function() {
         {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, minValue: "5"}}
       );
     });
+
+    it("Will add [optional] to the description if optional=true", function() {
+      cTests.testParticle(
+        "parameter",
+        "base",
+        require('./fixtures/parameter_base_output_8'),
+        {logicalId: "BaseParameter",hArgs: {type: "String", description: "A parameter", optional:true }}
+      );
+    });
+
+    it("will wrap allowedPattern if optional=true", function() {
+      cTests.testParticle(
+        "parameter",
+        "base",
+        require('./fixtures/parameter_base_output_9'),
+        {
+          logicalId: "BaseParameter",
+          hArgs: {
+            type: "String",
+            description: "A parameter",
+            allowedPattern: "[a-z]+",
+            optional: true
+          }
+        }
+      );
+    });
   });
 });
 
