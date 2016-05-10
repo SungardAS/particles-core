@@ -4,7 +4,7 @@ accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
 
-## [Unreleased]
+## [0.4.2] - 2016-05-09
 ### Added
 - `propertyValue` now has a `forceNumber` option to ensuere the output
   is a number and not a string when not a reference.
