@@ -4,8 +4,8 @@
 {{#if allowedValues}},"AllowedValues": {{helper "propertyValue" allowedValues}}{{/if}}
 {{#if allowedPattern}},"AllowedPattern": "{{#if optional}}({{/if}}{{allowedPattern}}{{#if optional}})?{{/if}}"{{/if}}
 {{#if maxLength}},"MaxLength": "{{maxLength}}"{{/if}}
-{{#if minLength}},"MinLength": "{{minLength}}"{{/if}}
+{{#if minLength}}{{#if optional}}{{else}},"MinLength": "{{minLength}}"{{/if}}{{/if}}
 {{#if maxValue}},"MaxValue": "{{maxValue}}"{{/if}}
-{{#if minValue}},"MinValue": "{{minValue}}"{{/if}}
+{{#if minValue}}{{#if optional}}{{else}},"MinValue": "{{minValue}}"{{/if}}{{/if}}
 {{#if description}},"Description": "{{#if optional}}[optional] {{/if}}{{description}}"{{/if}}
 {{#if constraintDescription}},"ConstraintDescription": "{{constraintDescription}}"{{/if}}

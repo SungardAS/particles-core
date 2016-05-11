@@ -138,6 +138,42 @@ describe("parameters", function() {
         }
       );
     });
+
+    it("will ignore minLength if optional=true", function() {
+      cTests.testParticle(
+        "parameter",
+        "base",
+        require('./fixtures/parameter_base_output_9'),
+        {
+          logicalId: "BaseParameter",
+          hArgs: {
+            type: "String",
+            description: "A parameter",
+            allowedPattern: "[a-z]+",
+            optional: true,
+            minLength: 5
+          }
+        }
+      );
+    });
+
+    it("will ignore minValue if optional=true", function() {
+      cTests.testParticle(
+        "parameter",
+        "base",
+        require('./fixtures/parameter_base_output_9'),
+        {
+          logicalId: "BaseParameter",
+          hArgs: {
+            type: "String",
+            description: "A parameter",
+            allowedPattern: "[a-z]+",
+            optional: true,
+            minValue: 5
+          }
+        }
+      );
+    });
   });
 });
 

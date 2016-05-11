@@ -85,7 +85,8 @@ Generic implementation of a parameter
   * `description {String}` maps to *Description*
   * `constraintDescription {String}` maps to *ConstraintDescription*
   * `optional` {Boolean} Will add *[optional]* to the front of
-    description and wrap *allowedPattern* with `()?`
+    description, wrap *allowedPattern* with `()?` and ignore minLength
+    and minValue
 
 ### cidr\_range
 

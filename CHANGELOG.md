@@ -3,6 +3,9 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.4.3] - 2016-05-11
+### Fixed
+- optional parameters disable MinLength and MinValue
 
 ## [0.4.2] - 2016-05-09
 ### Added
