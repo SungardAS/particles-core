@@ -3,6 +3,11 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.4.4] - 2016-07-04
+### Added
+- properties helper
+- property helper
+
 ## [0.4.3] - 2016-05-11
 ### Fixed
 - optional parameters disable MinLength and MinValue

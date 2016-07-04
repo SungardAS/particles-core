@@ -39,6 +39,31 @@ Will evalute to true if the related parameter is an empty string
 
 ##helpers
 
+### properties
+
+This helper must be used as a block and contain only
+property helpers as the contents.
+
+    {{#helper "m:core" "properties"}}
+      {{helper "m:core" "property" "SubnetId"}}
+      {{helper "m:core" "property" "Tags" optional=true}}
+    {{/helper}}
+
+
+### property
+
+Creates a resource property.  Can be used in a traditional
+template or within a `properties` helper block
+
+    {{property propertyName [valueVariable=String]
+[type=String]}}
+
+**Parameters**
+
+* `propertyName {string}` **required** - Name of the property
+* `valueVariable {String}` - Default is 'propertyName' with the first character converted to lowercase
+* `type {String}` - The parameter type [string|number|boolean|array|object]
+
 ### propertyValue
 
 Evaluates whether the property is an object or string and returns the

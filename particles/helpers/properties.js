@@ -5,7 +5,7 @@ var Handlebars = require("handlebars");
  * Creates a Properties block for property helpers
  *
  * This helper must be used as a block and contain only
- * property helpers as the contents for the block
+ * property helpers as the contents
  *
  *     {{#helper "m:core" "properties"}}
  *       {{helper "m:core" "property" "SubnetId"}}
