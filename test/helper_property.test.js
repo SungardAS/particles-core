@@ -2,7 +2,7 @@ var assert = require("assert");
 var property = require("../particles/helpers/property");
 
 describe("helpers", function() {
-  describe.only("property", function() {
+  describe("property", function() {
 
     it("will create a Tags property", function() {
       var result = property.call(
