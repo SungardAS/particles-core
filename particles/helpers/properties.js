@@ -1,5 +1,4 @@
 var _ = require("lodash");
-var Handlebars = require("handlebars");
 
 /*
  * Creates a Properties block for property helpers
@@ -20,7 +19,7 @@ module.exports = function(options) {
 
   var data = options.data || {};
 
-  data = Handlebars.createFrame(data);
+  data = _.cloneDeep(data);
   data._properties = {};
 
   options.fn(this,{data:data});
