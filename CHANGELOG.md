@@ -3,6 +3,10 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.4.5] - 2016-07-04
+### Fixed
+- use \_.cloneDeep instead of createFrame to support node < 4
+
 ## [0.4.4] - 2016-07-04
 ### Added
 - properties helper
