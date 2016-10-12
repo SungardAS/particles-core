@@ -1,5 +1,5 @@
 "Type": "{{type}}"
-{{#if default}},"Default": "{{default}}"{{/if}}
+{{#if default}},"Default": {{helper "propertyValue" default}}{{/if}}
 {{#if noEcho}},"NoEcho": "{{noEcho}}"{{/if}}
 {{#if allowedValues}},"AllowedValues": {{helper "propertyValue" allowedValues}}{{/if}}
 {{#if allowedPattern}},"AllowedPattern": "{{#if optional}}({{/if}}{{allowedPattern}}{{#if optional}})?{{/if}}"{{/if}}
