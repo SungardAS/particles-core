@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "condensation": "^0.5.5",
+    "condensation": "^0.5.9",
     "condensation-particle-tests": "^0.5.2",
     "mocha": "^2.5.3"
   }

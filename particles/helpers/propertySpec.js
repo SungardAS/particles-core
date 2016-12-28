@@ -3,9 +3,9 @@ var propertyValue = require("./propertyValue");
 var regionSpec = require("../../regionSpec.json");
 
 /*
- * Creates a Resource based on the AWS Resource Specification
+ * Creates a Property based on the AWS Resource Specification
  *
- *     {{helper "m:core" "resourceSpec" type="AWS::" [...] }}
+ *     {{helper "m:core" "propertySpec" type="AWS::" [...] }}
  *
  * @param {Object} options - Passed in by Handlebars
  * @param {String} [options.hash.type] - The AWS resource type
@@ -20,9 +20,9 @@ module.exports = function(options) {
   var type = self.type;
 
   var propertiesBlock = [];
-  console.log("resourceSpec", type);
-  var resourceSpec = regionSpec[self.s3.region].ResourceTypes[type];
-  var specProperties = resourceSpec.Properties;
+  console.log("propertySpec", type);
+  var propertySpec = regionSpec[self.s3.region].PropertyTypes[type];
+  var specProperties = propertySpec.Properties;
 
   _.each(_.toPairs(specProperties), function(kv) {
     if (self[kv[0]] || kv[1].Required) {
