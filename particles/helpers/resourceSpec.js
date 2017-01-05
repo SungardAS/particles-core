@@ -14,13 +14,12 @@ var regionSpec = require("../../regionSpec.json");
  *
  */
 module.exports = function(options) {
-  var self = _.merge({},this,options.hash);
+  var self = _.merge({},this,options.hash,options.data._parent.root);
   options = options || {};
 
   var type = self.type;
 
   var propertiesBlock = [];
-  console.log("resourceSpec", type);
   var resourceSpec = regionSpec[self.s3.region].ResourceTypes[type];
   var specProperties = resourceSpec.Properties;
 

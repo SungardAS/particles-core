@@ -20,7 +20,6 @@ module.exports = function(options) {
   var type = self.type;
 
   var propertiesBlock = [];
-  console.log("propertySpec", type);
   var propertySpec = regionSpec[self.s3.region].PropertyTypes[type];
   var specProperties = propertySpec.Properties;
 
