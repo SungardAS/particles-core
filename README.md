@@ -12,67 +12,128 @@ Often used particles for [condensation][condensation-url]
 
 ## conditions
 
-### is\_true
+### is\_empty
 
-Will evalute to true if the related parameter is `true`
+Will evalute to true if the related parameter is empty
 
 **Parameters**
 
-  * `paremeterLogicalId {String}` **required** LogicalId of the parameter
+  * `paremeterLogicalId {string}` **required** LogicalId of the parameter
+
+**Example**  
+```
+{{parameter "m:core" "base" default=""}}
+{{condition "m:core" "is_empty" parameterLogicalId="Parameter1"}}
+```
+
+-
+
+### is\_equal\_to
+
+Will evalute to true if the related parameter is equal to 
+
+**Parameters**
+
+  * `paremeterLogicalId {string}` **required** LogicalId of the parameter
+  * `value {string|number}` **required** value to compare
+
+**Example**  
+```
+{{parameter "m:core" "base" default="matchme"}}
+{{
+  condition "m:core" "is_equal_to"
+  parameterLogicalId="Parameter1"
+  value="matchme"
+}}
+```
+
+-
 
 ### is\_false
 
-Will evalute to true if the related parameter is `false`
+Will evalute to true if the related parameter's string is `"false"`
+
+**Parameters**
+
+  * `paremeterLogicalId {string}` **required** LogicalId of the parameter
+
+**Example**  
+```
+{{parameter "m:core" "true_false"}}
+{{condition "m:core" "is_false" parameterLogicalId="Parameter1"}}
+```
+
+-
+
+### is\_not\_empty
+
+Will evalute to true if the related parameter has a value
+
+**Parameters**
+
+  * `paremeterLogicalId {string}` **required** LogicalId of the parameter
+
+**Example**  
+```
+{{parameter "m:core" "base" default="notempty"}}
+{{condition "m:core" "is_not_empty" parameterLogicalId="Parameter1"}}
+```
+
+-
+
+### is\_not\_equal\_to
+
+Will evalute to true if the related parameter is not equalt to `value`
+
+**Parameters**
+
+  * `paremeterLogicalId {string}` **required** LogicalId of the parameter
+  * `value {string|number}` **required** value to compare
+
+**Example**
+```
+{{parameter "m:core" "base" default="notme"}}
+{{
+  condition "m:core" "is_not_equal_to"
+  parameterLogicalId="Parameter1"
+  value="matchme"
+}}
+```
+
+-
+
+### is\_populated
+
+Will evalute to true if the related parameter has a non-empty value
 
 **Parameters**
 
   * `paremeterLogicalId {String}` **required** LogicalId of the parameter
 
-### is\_empty
+**Example**
+```
+{{parameter "m:core" "base" default="populated"}}
+{{condition "m:core" "is_populated" parameterLogicalId="Parameter1"}}
+```
 
-Will evalute to true if the related parameter is an empty string
+-
+
+### is\_true
+
+Will evalute to true if the related parameter's string is equal to `true`
 
 **Parameters**
 
   * `paremeterLogicalId {String}` **required** LogicalId of the parameter
+
+**Example**
+```
+{{parameter "m:core" "true_false"}}
+{{condition "m:core" "is_true" parameterLogicalId="Parameter1"}}
+```
 
 
 ##helpers
-
-### properties
-
-This helper must be used as a block and contain only
-property helpers as the contents.
-
-    {{#helper "m:core" "properties"}}
-      {{helper "m:core" "property" "SubnetId"}}
-      {{helper "m:core" "property" "Tags" optional=true}}
-    {{/helper}}
-
-
-### property
-
-Creates a resource property.  Can be used in a traditional
-template or within a `properties` helper block
-
-    {{property propertyName [valueVariable=String]
-[type=String]}}
-
-**Parameters**
-
-* `propertyName {string}` **required** - Name of the property
-* `valueVariable {String}` - Default is 'propertyName' with the first character converted to lowercase
-* `type {String}` - The parameter type [string|number|boolean|array|object]
-
-### propertyValue
-
-Evaluates whether the property is an object or string and returns the
-correct template compatible syntax for each.
-
-**Parameters**
-
-  * `value {string|object}` **required** The property value to evaluate
-    and/or change.
 
 ## outputs
 
