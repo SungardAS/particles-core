@@ -1,11 +1,14 @@
 var _ = require('lodash');
 
 /*
+ * **Deprecated** - use `cValue` in condensation >0.6.0
+ *
  * Will check to see if a string is a parsable simple object. If it is
  * than it will left alone and simply returned back.
  *
  * If the string is not parseable it will be quoted and returned.
  *
+ * @deprecated since version 0.5.0
  * @param {String} str - The string to evaluate
  * @param {Object} options - Passed in by Handlebars
  * @return {String}
