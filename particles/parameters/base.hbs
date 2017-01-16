@@ -1,7 +1,7 @@
 "Type": "{{type}}"
-{{#if default}},"Default": {{helper "propertyValue" default}}{{/if}}
+{{#if default}},"Default": {{cValue default}}{{/if}}
 {{#if noEcho}},"NoEcho": "{{noEcho}}"{{/if}}
-{{#if allowedValues}},"AllowedValues": {{helper "propertyValue" allowedValues}}{{/if}}
+{{#if allowedValues}},"AllowedValues": {{cValue allowedValues}}{{/if}}
 {{#if allowedPattern}},"AllowedPattern": "{{#if optional}}({{/if}}{{allowedPattern}}{{#if optional}})?{{/if}}"{{/if}}
 {{#if maxLength}},"MaxLength": "{{maxLength}}"{{/if}}
 {{#if minLength}}{{#if optional}}{{else}},"MinLength": "{{minLength}}"{{/if}}{{/if}}

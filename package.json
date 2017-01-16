@@ -1,8 +1,8 @@
 {
   "name": "particles-core",
-  "version": "0.4.6",
+  "version": "0.5.0-rc0",
   "publishConfig": {
-    "tag": "latest"
+    "tag": "rc"
   },
   "description": "Often used particles for condensation",
   "scripts": {
@@ -30,11 +30,15 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "lodash": "^4.13.1"
+    "async": "^2.1.4",
+    "fs-extra": "^1.0.0",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.17.2",
+    "request": "^2.79.0"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "condensation": "^0.5.5",
+    "condensation": "^0.6.0-rc1",
     "condensation-particle-tests": "^0.5.2",
     "mocha": "^2.5.3"
   }

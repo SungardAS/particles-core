@@ -2,6 +2,6 @@
 value: ""
 description: ""
 ---
-"Value": {{helper 'propertyValue' value}}
-{{#if description}},"Description": {{helper 'propertyValue' description}}{{/if}}
-{{#if this.condition}},"Condition": {{helper 'propertyValue' this.condition}}{{/if}}
+"Value": {{cValue value}}
+{{#if description}},"Description": {{cValue description}}{{/if}}
+{{#if this.condition}},"Condition": {{cValue this.condition}}{{/if}}
