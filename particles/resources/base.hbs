@@ -1,8 +1,8 @@
 "Type": "{{type}}"
-{{#if creationPolicy}},"CreationPolicy": {{helper "propertyValue" creationPolicy}}{{/if}}
-{{#if deletionPolicy}},"DeletionPolicy": {{helper "propertyValue" deletionPolicy}}{{/if}}
-{{#if updatePolicy}},"UpdatePolicy": {{helper "propertyValue" updatePolicy}}{{/if}}
-{{#if properties}},"Properties": {{helper "propertyValue" properties}}{{/if}}
-{{#if this.condition}},"Condition": {{helper "propertyValue" this.condition}}{{/if}}
-{{#if this.metadata}},"Metadata": {{helper "propertyValue" this.metadata}}{{/if}}
-{{#if dependsOn}},"DependsOn": {{helper "propertyValue" dependsOn}}{{/if}}
+{{#if creationPolicy}},"CreationPolicy": {{cValue creationPolicy}}{{/if}}
+{{#if deletionPolicy}},"DeletionPolicy": {{cValue deletionPolicy}}{{/if}}
+{{#if updatePolicy}},"UpdatePolicy": {{cValue updatePolicy}}{{/if}}
+{{#if properties}},"Properties": {{cValue properties}}{{/if}}
+{{#if this.condition}},"Condition": {{cValue this.condition}}{{/if}}
+{{#if this.metadata}},"Metadata": {{cValue this.metadata}}{{/if}}
+{{#if dependsOn}},"DependsOn": {{cValue dependsOn}}{{/if}}

@@ -1,5 +1,4 @@
 var _ = require("lodash");
-var propertyValue = require("./propertyValue");
 var regionSpec = require("../../regionSpec.json");
 
 /*
@@ -16,6 +15,7 @@ var regionSpec = require("../../regionSpec.json");
 module.exports = function(options) {
   var self = _.merge({},this,options.hash,options.data._parent.root);
   options = options || {};
+  helpers = options.handlebars.helpers;
 
   var type = self.type;
 
@@ -26,9 +26,9 @@ module.exports = function(options) {
   _.each(_.toPairs(specProperties), function(kv) {
     if (self[kv[0]] || kv[1].Required) {
 
-      // propertyValue was written to return strings so that it is also compatible
+      // cValue was written to return strings so that it is also compatible
       // as a direct call from a template.  We need to account for that here.
-      var property = ['"',kv[0],'":',propertyValue(self[kv[0]],options)].join("");
+      var property = ['"',kv[0],'":',helpers.cValue(self[kv[0]],options)].join("");
 
       propertiesBlock.push(property);
     }

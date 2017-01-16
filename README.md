@@ -20,7 +20,7 @@ Will evalute to true if the related parameter is empty
 
   * `paremeterLogicalId {string}` **required** LogicalId of the parameter
 
-**Example**  
+**Example**
 ```
 {{parameter "m:core" "base" default=""}}
 {{condition "m:core" "is_empty" parameterLogicalId="Parameter1"}}
@@ -37,7 +37,7 @@ Will evalute to true if the related parameter is equal to
   * `paremeterLogicalId {string}` **required** LogicalId of the parameter
   * `value {string|number}` **required** value to compare
 
-**Example**  
+**Example**
 ```
 {{parameter "m:core" "base" default="matchme"}}
 {{
@@ -57,7 +57,7 @@ Will evalute to true if the related parameter's string is `"false"`
 
   * `paremeterLogicalId {string}` **required** LogicalId of the parameter
 
-**Example**  
+**Example**
 ```
 {{parameter "m:core" "true_false"}}
 {{condition "m:core" "is_false" parameterLogicalId="Parameter1"}}
@@ -73,7 +73,7 @@ Will evalute to true if the related parameter has a value
 
   * `paremeterLogicalId {string}` **required** LogicalId of the parameter
 
-**Example**  
+**Example**
 ```
 {{parameter "m:core" "base" default="notempty"}}
 {{condition "m:core" "is_not_empty" parameterLogicalId="Parameter1"}}
@@ -133,11 +133,87 @@ Will evalute to true if the related parameter's string is equal to `true`
 ```
 
 
-##helpers
+## helpers
+
+### propertySpec
+
+Builds a resource property based on the AWS CloudFormation Spec
+
+**Parameters**
+
+  * `type {string}` **required** the type of property to build
+  * `properties {...kv}` Named key/value pairs
+
+**Example**
+```
+{{
+  helper "m:core" propertySpec
+  type="AWS::AutoScaling::LaunchConfiguration.BlockDeviceMapping"
+  DeviceName="/dev/sda1"
+}}
+```
+
+-
+
+### resourceSpec
+
+Builds a resource based on the AWS CloudFormation Spec
+
+**Parameters**
+
+  * `type {string}` **required** the type of property to build
+  * `properties {...kv}` Named key/value pairs
+
+**Example**
+```
+{{
+  helper "m:core" "resourceSpec"
+  type="AWS::IAM::AccessKey"
+  UserName="Condensation"
+}}
+```
+
+-
+
+### thisTemplate
+
+Returns the path to the template this helper is included in
+
+**Example**
+```
+{{helper "m:core" "thisTemplate"}}
+```
+
+-
+
+### thisTemplateUrl
+
+Returns the URL to the template this helper is included in
+
+**Example**
+```
+{{helper "m:core" "thisTemplateUrl"}}
+```
 
 ## outputs
 
+### attribute
+
+Output the attribute for a resource
+
+**Parameters**
+
+  * `attributeName {string}` **required** The attribute name of the
+    resource to output
+  * `resourceLogicalId {string}` **required** The logicalId of the
+    resource
+  * `description {string}` - Description of the output
+
+-
+
 ### base
+
+Create any output
 
 **Parameters**
 
@@ -149,9 +225,11 @@ Will evalute to true if the related parameter's string is equal to `true`
 
 ### arn
 
-A string parameter with a constraint to only allow valid ARNs
+A string parameter with a constraint for valid ARN syntax
 
 **Extends _base_**
+
+-
 
 ### base
 
@@ -174,11 +252,15 @@ Generic implementation of a parameter
     description, wrap *allowedPattern* with `()?` and ignore minLength
     and minValue
 
+-
+
 ### cidr\_range
 
 Creates a parameter that accepts a valid CIDR as the value.
 
 **Extends _base_**
+
+-
 
 ### true\_false
 
@@ -186,45 +268,15 @@ Creates a parameter that accepts either "true" or "false" as the value.
 
 **Extends _base_**
 
+-
+
 ## partials
-
-### fn\_get\_att
-
-**Parameters**
-
-  * `logicalId {String}` **required** logicalId to reference
-  * `attributeName {String}` **required** name of the attribute to
-    reference
-
-### fn\_if
-
-**Parameters**
-
-  * `conditionId {String}` **required** condition logicalId to reference
-  * `trueValue {String}` **required** evaluated when condition is true
-  * `falseValue {String}` **required** evaluated when condition is false
-
-### logicalId
-
-**DEPRECATED**
-
-Use the `scopeId` helper provided by condensation >0.5.0
-
-### ref
-
-**DEPRECATED**
-
-Use the `ref` helper provided by condensation >0.5.0
-
-**Parameters**
-
-  * `logicalId {String}` **required** logicalId to reference
 
 ## resources
 
 ### base
 
-Generic implementation of a resource
+Create any resource
 
 **Parameters**
 
@@ -237,16 +289,64 @@ Generic implementation of a resource
   * `metadata {String}` maps to *Metadata*
   * `dependsOn {Int}` maps to *DependsOn*
 
+-
+
+### spec
+
+Create any resource with properties from the AWS CloudFormation Spec
+
+**Extends _base_**
+
+**Parameters**
+
+  * `properties {...kv}` - Named key/value pairs of valid properties
+
+**Example**
+```
+{{
+  resource "m:core" "resourceSpec"
+  type="AWS::IAM::AccessKey"
+  condition="MyCondition"
+  dependsOn="AnotherResource"
+  UserName="Condensation"
+}}
+```
+
+-
+
 ## sets
 
 ### empty\_conditions
 
 When used in a layout, will generate an `is_empty` and `is_populated`
-condition for a parameter.
+conditions for a parameter.
 
 **Parameters**
 
   * `paremeterLogicalId` **required** LogicalId for the parameter
+
+**Example**
+```
+{{set "m:core" "empty_conditions" logicalId="Parameter1"}}
+```
+
+-
+
+### equal\_conditions
+
+When used in a layout, will generate an `is_equal_to` and
+`is_not_equal_to` conditions for a parameter.
+
+**Parameters**
+
+  * `paremeterLogicalId` **required** LogicalId for the parameter
+
+**Example**
+```
+{{set "m:core" "equal_conditions" logicalId="Parameter1"}}
+```
+
+-
 
 ### true\_false
 
@@ -255,13 +355,21 @@ When used in a layout, will generate a parameter and condition for true/false va
 **Parameters**
 
   * `paremeterLogicalId` **required** LogicalId for the parameter
-  * `conditionLogicalId` **required** LogicalId for the condition
+  * `conditionLogicalId` - If set will overried the generated logicalId
+    for the conditions
 
 Passed on to parameter
 
   * `default {String}` maps to *Default*
   * `noEcho {Boolean}` maps to *NoEcho*
   * `description {String}` maps to *Description*
+
+**Example**
+```
+{{set "m:core" "true_false" parameterLogicalId="Parameter1"}}
+```
+
+-
 
 [condensation-image]: https://raw.githubusercontent.com/SungardAS/condensation/master/docs/images/condensation_logo.png
 [condensation-url]: https://github.com/SungardAS/condensation
