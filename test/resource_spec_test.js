@@ -1,10 +1,24 @@
 var assert = require("assert");
 var CondensationTests = require("condensation-particle-tests");
+var condensationJs = require("../condensation");
 
 var cTests = new CondensationTests();
 
 describe("resources", function() {
-  describe.only("spec", function() {
+
+  describe("spec", function() {
+
+    before(function(done) {
+      condensationJs.initialize({
+        options: {
+          s3: [{
+            aws: {
+              region: "us-east-1"
+            }
+          }]
+        }
+      },done);
+    });
 
     it("creates an 'AWS::EC2::Instance' resource", function() {
       cTests.testParticle(
