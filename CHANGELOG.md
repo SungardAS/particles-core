@@ -4,6 +4,10 @@ accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
 ## [0.5.0] - 2017-01-16
+### Fixed
+- tests
+
+## [0.5.0] - 2017-01-16
 ### Added
 - `propertySpec` helper - Builds sub properties for a resources based on the
   AWS CloudFormation Spec
