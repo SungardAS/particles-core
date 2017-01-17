@@ -1,8 +1,8 @@
 {
   "name": "particles-core",
-  "version": "0.5.0-rc0",
+  "version": "0.5.0",
   "publishConfig": {
-    "tag": "rc"
+    "tag": "latest"
   },
   "description": "Often used particles for condensation",
   "scripts": {
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "condensation": "^0.6.0-rc1",
+    "condensation": "^0.6.0",
     "condensation-particle-tests": "^0.5.2",
     "mocha": "^2.5.3"
   }
