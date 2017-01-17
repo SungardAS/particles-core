@@ -209,6 +209,16 @@ Output the attribute for a resource
     resource
   * `description {string}` - Description of the output
 
+**Example**
+```
+{{
+  output "m:core" "attribute"
+  logicalId="Output1"
+  resourceLogicalId="Resource1"
+  attributeName="Arn"
+}}
+```
+
 -
 
 ### base
@@ -221,6 +231,11 @@ Create any output
   * `description {string|object}` String, Ref or Fn to use for the
     description
 
+**Example**
+```
+{{output "m:core" "base" logicalId="Output1" value="Value1" description="A Value"}}
+```
+
 ## parameters
 
 ### arn
@@ -228,6 +243,11 @@ Create any output
 A string parameter with a constraint for valid ARN syntax
 
 **Extends _base_**
+
+**Example**
+```
+{{parameter "m:core" "arn" logicalId="Arn"}}
+```
 
 -
 
@@ -252,6 +272,11 @@ Generic implementation of a parameter
     description, wrap *allowedPattern* with `()?` and ignore minLength
     and minValue
 
+**Example**
+```
+{{parameter "m:core" "base" logicalId="Parameter1" type="String"}}
+```
+
 -
 
 ### cidr\_range
@@ -260,6 +285,11 @@ Creates a parameter that accepts a valid CIDR as the value.
 
 **Extends _base_**
 
+**Example**
+```
+{{parameter "m:core" "cidr_range" logicalId="Cidr"}}
+```
+
 -
 
 ### true\_false
@@ -267,6 +297,11 @@ Creates a parameter that accepts a valid CIDR as the value.
 Creates a parameter that accepts either "true" or "false" as the value.
 
 **Extends _base_**
+
+**Example**
+```
+{{parameter "m:core" "true_false" logicalId="DoThis"}}
+```
 
 -
 
@@ -288,6 +323,11 @@ Create any resource
   * `condition {String}` maps to *Condition*
   * `metadata {String}` maps to *Metadata*
   * `dependsOn {Int}` maps to *DependsOn*
+
+**Example**
+```
+{{resource "m:core" "base" logicalId="Resource" type="Custom::type"}}
+```
 
 -
 

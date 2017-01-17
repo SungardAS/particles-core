@@ -3,6 +3,24 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.5.0] - 2017-01-16
+### Added
+- `propertySpec` helper - Builds sub properties for a resources based on the
+  AWS CloudFormation Spec
+- `resourceSpec` - Builds a resource and top level properties based on
+  the AWS CloudFormation Spec
+- `outputs/attribute` - A quick way to define an output for the
+  attribute of a resource
+- `resources/spec` - Build a resource based on the AWS CloudFormation
+  Spec. This particle extends `resources/base`
+
+### Removed
+- `properties` helper - replaced with Spec
+- `property` helper - replaced with Spec
+- `propertyValue` helper - replaced by `cValue` in condensation 0.6.0
+- partials `fn_get_att`, `fn_if`, `logical_id`, and `ref` in favor of
+  the function helpers in condensation 0.6.0
+
 ## [0.4.6] - 2016-10-12
 ### Changed
 - base parameter will now accept objects for `default`
