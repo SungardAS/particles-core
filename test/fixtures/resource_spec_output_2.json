@@ -1,0 +1,14 @@
+{
+  "SpecResource": {
+     "Type": "AWS::EC2::Instance",
+     "CreationPolicy": {
+       "ResourceSignal": {
+         "Count": 1,
+         "Timeout": "3600"
+       }
+     },
+     "Properties": {
+       "ImageId": ""
+     }
+   }
+}

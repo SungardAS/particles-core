@@ -10,6 +10,13 @@ Often used particles for [condensation][condensation-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 
 
+## Particles
+* <a href="#conditions">conditions</a>
+* <a href="#helpers">helpers</a>
+* <a href="#parameters">parameters</a>
+* <a href="#resources">resources</a>
+* <a href="#sets">sets</a>
+
 ## conditions
 
 ### is\_empty
