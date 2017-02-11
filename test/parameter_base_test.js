@@ -19,7 +19,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_2'),
-        {logicalId: "BaseParameter",hArgs: {type: "Integer", description: "Enter any integer"}}
+        {logicalId: "BaseParameter",hashOpts: {type: "Integer", description: "Enter any integer"}}
       );
     });
 
@@ -28,7 +28,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_3'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true}}
       );
     });
 
@@ -37,7 +37,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_3'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: "true"}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: "true"}}
       );
     });
 
@@ -46,7 +46,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_4'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, maxLength: 5}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, maxLength: 5}}
       );
     });
 
@@ -55,7 +55,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_4'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, maxLength: "5"}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, maxLength: "5"}}
       );
     });
 
@@ -64,7 +64,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_5'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, minLength: 5}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, minLength: 5}}
       );
     });
 
@@ -73,7 +73,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_5'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, minLength: "5"}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, minLength: "5"}}
       );
     });
 
@@ -82,7 +82,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_6'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, maxValue: 5}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, maxValue: 5}}
       );
     });
 
@@ -91,7 +91,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_6'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, maxValue: "5"}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, maxValue: "5"}}
       );
     });
 
@@ -100,7 +100,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_7'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, minValue: 5}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, minValue: 5}}
       );
     });
 
@@ -109,7 +109,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_7'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "password", noEcho: true, minValue: "5"}}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "password", noEcho: true, minValue: "5"}}
       );
     });
 
@@ -118,7 +118,7 @@ describe("parameters", function() {
         "parameter",
         "base",
         require('./fixtures/parameter_base_output_8'),
-        {logicalId: "BaseParameter",hArgs: {type: "String", description: "A parameter", optional:true }}
+        {logicalId: "BaseParameter",hashOpts: {type: "String", description: "A parameter", optional:true }}
       );
     });
 
@@ -129,7 +129,7 @@ describe("parameters", function() {
         require('./fixtures/parameter_base_output_9'),
         {
           logicalId: "BaseParameter",
-          hArgs: {
+          hashOpts: {
             type: "String",
             description: "A parameter",
             allowedPattern: "[a-z]+",
@@ -146,7 +146,7 @@ describe("parameters", function() {
         require('./fixtures/parameter_base_output_9'),
         {
           logicalId: "BaseParameter",
-          hArgs: {
+          hashOpts: {
             type: "String",
             description: "A parameter",
             allowedPattern: "[a-z]+",
@@ -164,7 +164,7 @@ describe("parameters", function() {
         require('./fixtures/parameter_base_output_9'),
         {
           logicalId: "BaseParameter",
-          hArgs: {
+          hashOpts: {
             type: "String",
             description: "A parameter",
             allowedPattern: "[a-z]+",

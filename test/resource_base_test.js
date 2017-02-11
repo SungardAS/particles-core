@@ -19,7 +19,7 @@ describe("resources", function() {
         "resource",
         "base",
         require('./fixtures/resource_base_output_2'),
-        {logicalId: "BaseResource",hArgs: {type: "TestMe"}}
+        {logicalId: "BaseResource",hashOpts: {type: "TestMe"}}
       );
     });
 
@@ -30,7 +30,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_3'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             creationPolicy: {
               ResourceSignal: {
@@ -50,7 +50,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_3'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             creationPolicy: '{"ResourceSignal": {"Count": 1, "Timeout":"3600" }}'
           }
@@ -66,7 +66,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_4'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             deletionPolicy: "Retain"
           }
@@ -81,7 +81,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_5'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             creationPolicy: {
               AutoScalingRollingUpdate : {
@@ -107,7 +107,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_5'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             creationPolicy: '{"AutoScalingRollingUpdate": {"MaxBatchSize": 5, "MinInstancesInService": 10, "MinSuccessfulInstancesPercent": 65, "PauseTime": "PT5M", "WaitOnResourceSignals": true }, "AutoScalingScheduledAction": {"IgnoreUnmodifiedGroupSizeProperties": true}}'
           }
@@ -121,7 +121,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_6'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             properties: {
               Prop1: "value1"
@@ -138,7 +138,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_6'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             properties: '{"Prop1": "value1" }'
           }
@@ -152,7 +152,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_7'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             condition: "MyCondition"
           }
@@ -166,7 +166,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_7'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             condition: "MyCondition"
           }
@@ -180,7 +180,7 @@ describe("resources", function() {
           require('./fixtures/resource_base_output_8'),
           {
             logicalId: "BaseResource",
-            hArgs: {
+            hashOpts: {
               type: "TestMe",
               metadata: {
                 MetaKey1: "metaValue1"
@@ -197,7 +197,7 @@ describe("resources", function() {
           require('./fixtures/resource_base_output_8'),
           {
             logicalId: "BaseResource",
-            hArgs: {
+            hashOpts: {
               type: "TestMe",
               metadata: '{MetaKey1: "metaValue1" }'
             }
@@ -213,7 +213,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_8'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             metadata: {
               MetaKey1: "metaValue1"
@@ -230,7 +230,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_8'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             metadata: '{"MetaKey1": "metaValue1" }'
           }
@@ -245,7 +245,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_9'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             dependsOn: ["Resource1"]
           }
@@ -260,7 +260,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_9'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             dependsOn: '["Resource1"]'
           }
@@ -275,7 +275,7 @@ describe("resources", function() {
         require('./fixtures/resource_base_output_10'),
         {
           logicalId: "BaseResource",
-          hArgs: {
+          hashOpts: {
             type: "TestMe",
             dependsOn: 'Resource1'
           }

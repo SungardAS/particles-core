@@ -11,7 +11,7 @@ describe("conditions", function() {
         "condition",
         "is_false",
         require('./fixtures/condition_is_false_output_1'),
-        {logicalId: "Condition1", hArgs: {parameterLogicalId: "Parameter1"}}
+        {logicalId: "Condition1", hashOpts: {parameterLogicalId: "Parameter1"}}
       );
     });
 
