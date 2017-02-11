@@ -8,7 +8,7 @@
        }
      },
      "Properties": {
-       "ImageId": ""
+       "ImageId": "ami-xxxxxxxxx"
      }
    }
 }

@@ -25,7 +25,16 @@ describe("resources", function() {
         "resource",
         "spec",
         require('./fixtures/resource_spec_output_1'),
-        {logicalId: "SpecResource",hArgs: {type: "AWS::EC2::Instance", s3: {region: "us-east-1"}}}
+        {
+          logicalId: "SpecResource",
+          hOpts: {
+            hash: {
+              "type": "AWS::EC2::Instance",
+              "ImageId": "ami-xxxxxxxxx"
+            }
+          },
+          cOpts: {s3: {region: "us-east-1"}},
+        }
       );
     });
 
@@ -36,14 +45,19 @@ describe("resources", function() {
         require('./fixtures/resource_spec_output_2'),
         {
           logicalId: "SpecResource",
-          hArgs: {
-            type: "AWS::EC2::Instance",
-            creationPolicy: {
-              ResourceSignal: {
-                Count: 1,
-                Timeout: "3600"
-              }
-            },
+          hOpts: {
+            hash: {
+              type: "AWS::EC2::Instance",
+              creationPolicy: {
+                ResourceSignal: {
+                  Count: 1,
+                  Timeout: "3600"
+                }
+              },
+              ImageId: "ami-xxxxxxxxx",
+            }
+          },
+          cOpts: {
             s3: {
               region: "us-east-1"
             }
@@ -59,9 +73,14 @@ describe("resources", function() {
         require('./fixtures/resource_spec_output_2'),
         {
           logicalId: "SpecResource",
-          hArgs: {
-            type: "AWS::EC2::Instance",
-            creationPolicy: '{"ResourceSignal": {"Count": 1, "Timeout":"3600" }}',
+          hOpts: {
+            hash: {
+              type: "AWS::EC2::Instance",
+              creationPolicy: '{"ResourceSignal": {"Count": 1, "Timeout":"3600" }}',
+              ImageId: "ami-xxxxxxxxx"
+            }
+          },
+          cOpts: {
             s3: {
               region: "us-east-1"
             }
@@ -77,9 +96,11 @@ describe("resources", function() {
         require('./fixtures/resource_spec_output_3'),
         {
           logicalId: "SpecResource",
-          hArgs: {
+          hashOpts: {
             type: "AWS::EC2::Instance",
             ImageId: "ami-xxxxxxxxx",
+          },
+          cOpts: {
             s3: {
               region: "us-east-1"
             }

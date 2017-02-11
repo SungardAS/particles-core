@@ -20,7 +20,7 @@ describe("outputs", function() {
         "output",
         "base",
         require('./fixtures/output_base_output_2'),
-        {logicalId: "Output1", hArgs:{value: "A Value"}}
+        {logicalId: "Output1", hashOpts:{value: "A Value"}}
       );
     });
 
@@ -29,7 +29,7 @@ describe("outputs", function() {
         "output",
         "base",
         require('./fixtures/output_base_output_3'),
-        {logicalId: "Output1", hArgs:{value: "A Value", description: "A description"}}
+        {logicalId: "Output1", hashOpts:{value: "A Value", description: "A description"}}
       );
     });
 
@@ -38,7 +38,7 @@ describe("outputs", function() {
         "output",
         "base",
         require('./fixtures/output_base_output_4'),
-        {logicalId: "Output1", hArgs:{value: "A Value", description: "A description", condition: "SomeCondition"}}
+        {logicalId: "Output1", hashOpts:{value: "A Value", description: "A description", condition: "SomeCondition"}}
       );
     });
 

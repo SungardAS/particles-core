@@ -3,7 +3,16 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
-## [0.5.0] - 2017-01-16
+
+## [0.5.2] - 2017-01-16
+### Added
+- tests for spec helpers
+
+### Changed
+- spec helpers will throw an error if they cannot find a resource,
+  property or a required property was not set.
+
+## [0.5.1] - 2017-01-16
 ### Fixed
 - tests
 
