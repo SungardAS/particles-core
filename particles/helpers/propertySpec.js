@@ -36,7 +36,7 @@ module.exports = function() {
   var specProperties = propertySpec.Properties;
 
   _.each(_.toPairs(specProperties), function(kv) {
-    if (self[kv[0]]) {
+    if (!_.isNil(self[kv[0]])) {
 
       // cValue was written to return strings so that it is also compatible
       // as a direct call from a template.  We need to account for that here.
