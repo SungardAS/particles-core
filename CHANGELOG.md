@@ -3,6 +3,10 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.5.4] - 2017-06-02
+### Fixed
+- Use root object to get s3 information for propertySpec helper
+
 ## [0.5.3] - 2017-02-12
 ### Fixed
 - Only throw errors for spec helpers if `_.isNil` is true
