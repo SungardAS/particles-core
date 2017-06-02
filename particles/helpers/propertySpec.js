@@ -27,7 +27,9 @@ module.exports = function() {
   }
 
   var propertiesBlock = [];
-  var propertySpec = regionSpec[self.s3.region].PropertyTypes[type];
+
+  // always look in handlebars root object for s3 region
+  var propertySpec = regionSpec[options.data.root.s3.region].PropertyTypes[type];
 
   if (!propertySpec) {
     throw new VError("%s was not found in the AWS CloudFormation Spec", type);

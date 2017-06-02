@@ -24,11 +24,13 @@ describe("helper", function() {
         hOpts: {
           hash: {
             Status: "Enabled"
-          }
-        },
-        cOpts: {
-          s3: {
-            region: "us-east-1"
+          },
+          data: {
+            root: {
+              s3: {
+                region: "us-east-1"
+              }
+            }
           }
         }
       });
@@ -41,11 +43,13 @@ describe("helper", function() {
           hash: {
             type: "AWS::S3::Bucket.VersioningConfiguration",
             Status: "Enabled"
-          }
-        },
-        cOpts: {
-          s3: {
-            region: "us-east-1"
+          },
+          data: {
+            root: {
+              s3: {
+                region: "us-east-1"
+              }
+            }
           }
         }
       });
