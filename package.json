@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "condensation": "^0.6.0",
+    "condensation": "sungardas/condensation#develop",
     "condensation-particle-tests": "^0.5.4",
     "mocha": "^2.5.3"
   }

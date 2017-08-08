@@ -26,7 +26,7 @@ module.exports = function() {
     type = arguments[0];
   }
 
-  var propertiesBlock = [];
+  var propertiesBlock = {};
 
   // always look in handlebars root object for s3 region
   var propertySpec = regionSpec[options.data.root.s3.region].PropertyTypes[type];
@@ -40,17 +40,13 @@ module.exports = function() {
   _.each(_.toPairs(specProperties), function(kv) {
     if (!_.isNil(self[kv[0]])) {
 
-      // cValue was written to return strings so that it is also compatible
-      // as a direct call from a template.  We need to account for that here.
-      var property = ['"',kv[0],'":',helpers.cValue(self[kv[0]],options)].join("");
-
-      propertiesBlock.push(property);
+      propertiesBlock[kv[0]] = options.cUtil.parse(self[kv[0]]);
     }
     else if (kv[1].Required) {
       throw new VError("%s is a required property for %s according to the AWS CloudFormation Spec", kv[0], type);
     }
   });
 
-  var propertiesBlock = propertiesBlock.join(",");
-  return ["{",propertiesBlock,"}"].join("");
+  var returnString = helpers.cValue(propertiesBlock, options);
+  return returnString;
 };
